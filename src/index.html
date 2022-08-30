@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rewrite Browser Alert Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+</head>
+
+<body>
+    <h1>Rewrite Browser Alert Project</h1>
+
+    <p>
+        <h3>Alert Message</h3>
+        <input id="alert-msg" value="Test Alert" />
+        <button type="button" onclick="testAlert()">Invoke Alert</button>
+    </p>
+
+    <p>
+        <h3>Alert Message</h3>
+        <input id="prompt-msg" value="Test Prompt" />
+        <button type="button" onclick="testPrompt()">Invoke Prompt</button>
+    </p>
+
+    <script src="js/rewrite-alerts.js"></script>
+    <script>
+        function testAlert() {
+            alert(document.getElementById('alert-msg').value);
+        }
+
+        function testPrompt() {
+            console.log(prompt(document.getElementById('prompt-msg').value, "Value Teste"));
+        }
+    </script>
+</body>
+
+</html>
